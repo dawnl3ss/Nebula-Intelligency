@@ -6,8 +6,8 @@ class NeuronalSystem(object):
         self.neurone_input = 2
         self.neurone_hidden = 3
         self.neurone_output = 1
-        self.W1 = np.random.randn(self.neurone_input, self.neurone_hidden) # Matrice de 2x3
-        self.W2 = np.random.randn(self.neurone_hidden, self.neurone_output) # Matrice de 3x1
+        self.W1 = np.random.randn(self.neurone_input, self.neurone_hidden)
+        self.W2 = np.random.randn(self.neurone_hidden, self.neurone_output)
 
     def ia_forward(self, x):
         return self.sigmoid(np.dot(self.sigmoid(np.dot(x, self.W1)), self.W2))
